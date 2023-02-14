@@ -1,0 +1,18 @@
+# ninja log v5
+137	377	6980461374793462	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/STM32/stm32f4xx_usart.o	8bd247046893c356
+39	329	6980461374324835	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/COMM/system_stm32f4xx.o	b4988af38fc9a0f1
+5	37	6980461371473124	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/CMSIS/startup_stm32f40_41xxx.o	9517d98697b091aa
+10	408	6980461375106275	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/STM32/stm32f4xx_rcc.o	ff663e03eeb3622f
+2	136	6980461372319262	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/COMM/stm32f4xx_it.o	f39a09b2b364b03a
+331	548	6980461376486146	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/main.o	a29b639f4e20082d
+306	484	6980461375796198	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/STM32/misc.o	949b26dbf5599d47
+8	305	6980461374103044	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/STM32/stm32f4xx_gpio.o	220b9aa1de82d4e7
+551	623	6980461377176835	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Exe/uartTest_strtok.out	104bf2e04ac2c335
+625	634	6980461377489554	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Exe/uartTest_strtok.hex	5ac36aba3103e09a
+6	26	6980461783678620	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/CMSIS/startup_stm32f40_41xxx.o	9517d98697b091aa
+2	62	6980461783991039	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/COMM/stm32f4xx_it.o	f39a09b2b364b03a
+10	200	6980461785306202	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/STM32/misc.o	949b26dbf5599d47
+8	224	6980461785527943	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/STM32/stm32f4xx_gpio.o	220b9aa1de82d4e7
+30	229	6980461785527943	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/COMM/system_stm32f4xx.o	b4988af38fc9a0f1
+64	355	6980461786843579	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/STM32/stm32f4xx_rcc.o	ff663e03eeb3622f
+202	438	6980461787690638	C:/Users/IoT02/Documents/iar/uartTest_strtok/Debug/Obj/STM32/stm32f4xx_usart.o	8bd247046893c356
