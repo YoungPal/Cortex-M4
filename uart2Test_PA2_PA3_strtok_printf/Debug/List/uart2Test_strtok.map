@@ -1,6 +1,6 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.32.1.338/W64 for ARM                  14/Feb/2023  13:47:28
+# IAR ELF Linker V9.32.1.338/W64 for ARM                  14/Feb/2023  13:52:30
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =
@@ -465,9 +465,9 @@ SPI1_IRQHandler          0x800'2a99         Code  Wk  startup_stm32f40_41xxx.o [
 SPI2_IRQHandler          0x800'2a9d         Code  Wk  startup_stm32f40_41xxx.o [2]
 SPI3_IRQHandler          0x800'2ad5         Code  Wk  startup_stm32f40_41xxx.o [2]
 SVC_Handler              0x800'10f1    0x2  Code  Gb  stm32f4xx_it.o [3]
-Serial_Event             0x800'1eeb   0xb6  Code  Gb  main.o [1]
-Serial_Send              0x800'1fa1   0x1e  Code  Gb  main.o [1]
-Serial_Send_String       0x800'1fbf   0x16  Code  Gb  main.o [1]
+Serial2_Event            0x800'1eeb   0xb6  Code  Gb  main.o [1]
+Serial2_Send             0x800'1fa1   0x1e  Code  Gb  main.o [1]
+Serial2_Send_String      0x800'1fbf   0x16  Code  Gb  main.o [1]
 SetSysClock              0x800'27ef   0xaa  Code  Lc  system_stm32f4xx.o [3]
 SysTick_Handler          0x800'10f7    0x2  Code  Gb  stm32f4xx_it.o [3]
 SystemInit               0x800'27a9   0x46  Code  Gb  system_stm32f4xx.o [3]
@@ -579,8 +579,8 @@ memchr                   0x800'1171         Code  Gb  memchr.o [7]
 ndigs                    0x800'28cc   0x28  Data  Lc  iar_Stoulx.o [5]
 printf                   0x800'2531   0x28  Code  Gb  printf.o [5]
 putchar                  0x800'1fd5   0x22  Code  Gb  main.o [1]
-rx1Data                 0x2000'0090   0x34  Data  Gb  main.o [1]
 rx1Flag                 0x2000'00d0    0x1  Data  Gb  main.o [1]
+rx2Data                 0x2000'0090   0x34  Data  Gb  main.o [1]
 scalbln                  0x800'1349         Code  Gb  ldexp.o [6]
 scalblnl                 0x800'1349         Code  Gb  ldexp.o [6]
 scalbn                   0x800'1349         Code  Gb  ldexp.o [6]

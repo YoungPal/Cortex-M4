@@ -15,11 +15,11 @@
 
 
 volatile unsigned char rx1Flag = 0;
-char rx1Data[50];
+char rx2Data[50];
 void UART1_Init();
-void Serial_Event();
-void Serial_Send(unsigned char t);
-void Serial_Send_String(char* s);
+void Serial2_Event();
+void Serial2_Send(unsigned char t);
+void Serial2_Send_String(char* s);
 int putchar(int ch);
 void print_2d1(double number);
 
@@ -71,26 +71,26 @@ int main()
   USART_ITConfig(USART3, USART_IT_RXNE, ENABLE); // USART3 Interrupt enable
   USART_Cmd(USART3, ENABLE);
 
-  Serial_Send_String("Start Main()\n\r");
+  Serial2_Send_String("Start Main()\n\r");
   while(1)
   {
     if(rx1Flag)  // '\r' 까지 입력되면
-      Serial_Event();
+      Serial2_Event();
   }
 }
 
-void Serial_Event()
+void Serial2_Event()
 {
   int i=0;
   int num = 0;
   char * pToken;
   char * pArray[ARR_CNT]={0};
   char recvBuf[CMD_SIZE]={0};       
-  strcpy(recvBuf,rx1Data);
+  strcpy(recvBuf,rx2Data);
 
   rx1Flag = 0; // 다시 Rflag 를 0으로 놓는다.    
-  Serial_Send_String(recvBuf);
-  Serial_Send_String("\n\r");
+  Serial2_Send_String(recvBuf);
+  Serial2_Send_String("\n\r");
   printf("rx : %s\r\n",recvBuf);
      
   pToken = strtok(recvBuf,"[@]");
@@ -120,17 +120,17 @@ void Serial_Event()
   }
 }
 
-void Serial_Send(unsigned char t)
+void Serial2_Send(unsigned char t)
 {
   USART_SendData(USART3, t);
   while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
 }
 
-void Serial_Send_String(char* s)
+void Serial2_Send_String(char* s)
 {
   while( *s != '\0')
   {
-   Serial_Send((unsigned char)(*s));
+   Serial2_Send((unsigned char)(*s));
    s++;   //s = s + 1;
   }
 }
@@ -147,10 +147,10 @@ void USART3_IRQHandler(void)
   if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
   {
 	static int i=0;
-	rx1Data[i] = USART_ReceiveData(USART3);
-	if(rx1Data[i] == '\r')  
+	rx2Data[i] = USART_ReceiveData(USART3);
+	if(rx2Data[i] == '\r')  
 	{
-		rx1Data[i] = '\0';
+		rx2Data[i] = '\0';
 		rx1Flag = 1;
 		i = 0;
 	}
@@ -167,14 +167,14 @@ void print_2d1(double number)		        /* floating-point number xx.x */
 
 	j = (int)(number*10. + 0.5);
 	i = j / 100;					// 10^1
-	if(i == 0) Serial_Send(' ');
-	else       Serial_Send(i + '0');
+	if(i == 0) Serial2_Send(' ');
+	else       Serial2_Send(i + '0');
 
 	j = j % 100;					// 10^0
 	i = j / 10;
-	Serial_Send(i + '0');
-	Serial_Send('.');
+	Serial2_Send(i + '0');
+	Serial2_Send('.');
 
 	i = j % 10;					// 10^-1
-	Serial_Send(i + '0');
+	Serial2_Send(i + '0');
 }

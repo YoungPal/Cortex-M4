@@ -120578,16 +120578,16 @@
     "scope": null
   },
   {
-    "ID": "c:@rx1Data",
+    "ID": "c:@rx2Data",
     "What": "Variable",
     "defdec": "Dec",
-    "display": "rx1Data",
+    "display": "rx2Data",
     "location": {
       "column": "6",
       "line": "18",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "rx1Data",
+    "name": "rx2Data",
     "origin": "project_file",
     "scope": null
   },
@@ -120606,44 +120606,44 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Serial_Event",
+    "ID": "c:@F@Serial2_Event",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void Serial_Event(void)",
+    "display": "void Serial2_Event(void)",
     "location": {
       "column": "6",
       "line": "20",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "Serial_Event",
+    "name": "Serial2_Event",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@Serial_Send",
+    "ID": "c:@F@Serial2_Send",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void Serial_Send(unsigned char)",
+    "display": "void Serial2_Send(unsigned char)",
     "location": {
       "column": "6",
       "line": "21",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "Serial_Send",
+    "name": "Serial2_Send",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@Serial_Send_String",
+    "ID": "c:@F@Serial2_Send_String",
     "What": "Function",
     "defdec": "Dec",
-    "display": "void Serial_Send_String(char *)",
+    "display": "void Serial2_Send_String(char *)",
     "location": {
       "column": "6",
       "line": "22",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "Serial_Send_String",
+    "name": "Serial2_Send_String",
     "origin": "project_file",
     "scope": null
   },
@@ -120690,7 +120690,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@718@F@main@GPIO_InitStructure_LED",
+    "ID": "c:main.c@721@F@main@GPIO_InitStructure_LED",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure_LED",
@@ -120704,7 +120704,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@764@F@main@GPIO_InitStructure",
+    "ID": "c:main.c@767@F@main@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
@@ -120718,7 +120718,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@806@F@main@USART_InitStructure",
+    "ID": "c:main.c@809@F@main@USART_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "USART_InitStructure",
@@ -120732,7 +120732,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@848@F@main@NVIC_InitStructure",
+    "ID": "c:main.c@851@F@main@NVIC_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "NVIC_InitStructure",
@@ -120746,21 +120746,21 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Serial_Event",
+    "ID": "c:@F@Serial2_Event",
     "What": "Function",
     "defdec": "Def",
-    "display": "void Serial_Event(void)",
+    "display": "void Serial2_Event(void)",
     "location": {
       "column": "6",
       "line": "82",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "Serial_Event",
+    "name": "Serial2_Event",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:main.c@3020@F@Serial_Event@i",
+    "ID": "c:main.c@3026@F@Serial2_Event@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -120774,7 +120774,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3032@F@Serial_Event@num",
+    "ID": "c:main.c@3038@F@Serial2_Event@num",
     "What": "Variable",
     "defdec": "Def",
     "display": "num",
@@ -120788,7 +120788,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3048@F@Serial_Event@pToken",
+    "ID": "c:main.c@3054@F@Serial2_Event@pToken",
     "What": "Variable",
     "defdec": "Def",
     "display": "pToken",
@@ -120802,7 +120802,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3066@F@Serial_Event@pArray",
+    "ID": "c:main.c@3072@F@Serial2_Event@pArray",
     "What": "Variable",
     "defdec": "Def",
     "display": "pArray",
@@ -120816,7 +120816,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3097@F@Serial_Event@recvBuf",
+    "ID": "c:main.c@3103@F@Serial2_Event@recvBuf",
     "What": "Variable",
     "defdec": "Def",
     "display": "recvBuf",
@@ -120830,30 +120830,30 @@
     "scope": null
   },
   {
-    "ID": "c:@F@Serial_Send",
+    "ID": "c:@F@Serial2_Send",
     "What": "Function",
     "defdec": "Def",
-    "display": "void Serial_Send(unsigned char)",
+    "display": "void Serial2_Send(unsigned char)",
     "location": {
       "column": "6",
       "line": "123",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "Serial_Send",
+    "name": "Serial2_Send",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@Serial_Send_String",
+    "ID": "c:@F@Serial2_Send_String",
     "What": "Function",
     "defdec": "Def",
-    "display": "void Serial_Send_String(char *)",
+    "display": "void Serial2_Send_String(char *)",
     "location": {
       "column": "6",
       "line": "129",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "Serial_Send_String",
+    "name": "Serial2_Send_String",
     "origin": "project_file",
     "scope": null
   },
@@ -120886,7 +120886,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4339@F@USART3_IRQHandler@i",
+    "ID": "c:main.c@4350@F@USART3_IRQHandler@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -120914,7 +120914,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4599@F@print_2d1@i",
+    "ID": "c:main.c@4610@F@print_2d1@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -120928,7 +120928,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4599@F@print_2d1@j",
+    "ID": "c:main.c@4610@F@print_2d1@j",
     "What": "Variable",
     "defdec": "Dec",
     "display": "j",
