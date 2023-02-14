@@ -2177,4 +2177,7 @@
     <file>
         <name>$PROJ_DIR$\main.c</name>
     </file>
+    <file>
+        <name>$PROJ_DIR$\uart2.c</name>
+    </file>
 </project>

@@ -59,6 +59,11 @@ build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\Browse
   flags = C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\main.c -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\main.tmp
   rspfile_name = C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\main.xcl.rsp
 
+build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.xcl : COMPILER_XCL 
+  xclcommand = -source_file C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\uart2.c -xcl_file C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.xcl -macro_file C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\uart2.c -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.tmp
+  rspfile_name = C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.xcl.rsp
+
 build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\COMM\stm32f4xx_it.pbi : INDEXER C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\COMM\stm32f4xx_it.xcl |  $
 C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\stm32f4xx_it.c
   flags = -out=C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\COMM\stm32f4xx_it.pbi -f C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\COMM\stm32f4xx_it.xcl
@@ -87,6 +92,10 @@ build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\Browse
 C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\main.c
   flags = -out=C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\main.pbi -f C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\main.xcl
 
+build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.pbi : INDEXER C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.xcl |  $
+C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\uart2.c
+  flags = -out=C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.pbi -f C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.xcl
+
 build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok.pbw : MAKEBROWSE C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok.pbd
   flags = C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok.pbd -output C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok.pbw
 
@@ -100,8 +109,9 @@ C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\S
 C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\STM32\stm32f4xx_usart.pbi
   flags = -M C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok_part1.pbi C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\STM32\stm32f4xx_gpio.pbi C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\STM32\stm32f4xx_rcc.pbi C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\STM32\stm32f4xx_usart.pbi
 
-build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok_part2.pbi : PDBLINK C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\main.pbi
-  flags = -M C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok_part2.pbi C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\main.pbi
+build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok_part2.pbi : PDBLINK C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\main.pbi |  $
+C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.pbi
+  flags = -M C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok_part2.pbi C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\main.pbi C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2.pbi
 
 build C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok.pbd : PDBLINK C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok_part0.pbi |  $
 C$:\Users\IoT02\Documents\iar\uart2Test_PA2_PA3_strtok_printf\Debug\BrowseInfo\uart2Test_strtok_part1.pbi $

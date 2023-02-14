@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
     <fileVersion>5</fileVersion>
-    <fileChecksum>2468134350</fileChecksum>
+    <fileChecksum>641012263</fileChecksum>
     <configuration>
         <name>Debug</name>
         <outputs>
@@ -36,6 +36,9 @@
             <file>$PROJ_DIR$\..\..\..\..\..\Program Files\IAR Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h</file>
             <file>$PROJ_DIR$\Debug\Obj\main.o</file>
             <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$PROJ_DIR$\Debug\Obj\uart2.o</file>
+            <file>$PROJ_DIR$\uart2.h</file>
+            <file>$PROJ_DIR$\uart2.c</file>
             <file>$PROJ_DIR$\..\..\..\..\..\Program Files\IAR Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\misc.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\Program Files\IAR Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_gpio.h</file>
             <file>$PROJ_DIR$\..\..\..\..\..\Program Files\IAR Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\stm32f4xx_rcc.h</file>
@@ -71,7 +74,22 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 15 29 22 41 10 6 49 34 4 40 36 35 8</file>
+                    <file> 15 29 22 44 10 6 52 37 4 31 43 39 38 8</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\uart2.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 31</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 23 19 12 14 18 3 16 11 17 41 9 7 1 28 13 35 36 0 34</file>
                 </tool>
             </inputs>
         </file>
@@ -104,13 +122,13 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 49</file>
+                    <file> 52</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 33 23 19 12 14 18 3 16 11 17 38 9 7 1 28 13 32 0 31</file>
+                    <file> 36 23 19 12 14 18 3 16 11 17 41 9 7 1 28 13 35 0 34</file>
                 </tool>
             </inputs>
         </file>
@@ -125,7 +143,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 23 19 12 14 18 3 16 11 17 38 9 7 1 28 13 32 33 0 31</file>
+                    <file> 23 19 12 14 18 3 16 11 17 41 9 7 1 28 13 35 36 0 34</file>
                 </tool>
             </inputs>
         </file>
@@ -140,7 +158,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 32 23 19 12 14 18 3 16 11 17 38 9 7 1 28 13 33 0 31</file>
+                    <file> 35 23 19 12 14 18 3 16 11 17 41 9 7 1 28 13 36 0 34</file>
                 </tool>
             </inputs>
         </file>
@@ -149,13 +167,13 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 34</file>
+                    <file> 37</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 0 23 19 12 14 18 3 16 11 17 38 9 7 1 28 13 32 33 31</file>
+                    <file> 0 23 19 12 14 18 3 16 11 17 41 9 7 1 28 13 35 36 34</file>
                 </tool>
             </inputs>
         </file>
@@ -164,7 +182,7 @@
             <outputs>
                 <tool>
                     <name>AARM</name>
-                    <file> 41</file>
+                    <file> 44</file>
                 </tool>
             </outputs>
         </file>
@@ -179,7 +197,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 31 23 19 12 14 18 3 16 11 17 38 9 7 1 28 13 32 33 0</file>
+                    <file> 34 23 19 12 14 18 3 16 11 17 41 9 7 1 28 13 35 36 0</file>
                 </tool>
             </inputs>
         </file>
@@ -194,7 +212,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 23 19 12 14 18 3 16 11 17 38 9 7 1 28 13 32 33 0 31 21 30 24 20 39 27</file>
+                    <file> 23 19 12 14 18 3 16 11 17 41 9 7 1 28 13 35 36 0 34 32 21 30 24 20 42 27</file>
                 </tool>
             </inputs>
         </file>
