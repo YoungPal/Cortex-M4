@@ -120676,13 +120676,27 @@
     "scope": null
   },
   {
+    "ID": "c:@F@UART2_init",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void UART2_init(void)",
+    "location": {
+      "column": "6",
+      "line": "25",
+      "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
+    },
+    "name": "UART2_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:@F@main",
     "What": "Function",
     "defdec": "Def",
     "display": "int main(void)",
     "location": {
       "column": "5",
-      "line": "26",
+      "line": "27",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "main",
@@ -120690,13 +120704,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@721@F@main@GPIO_InitStructure_LED",
+    "ID": "c:main.c@741@F@main@GPIO_InitStructure_LED",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure_LED",
     "location": {
       "column": "22",
-      "line": "28",
+      "line": "29",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "GPIO_InitStructure_LED",
@@ -120704,13 +120718,27 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@767@F@main@GPIO_InitStructure",
+    "ID": "c:@F@UART2_init",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void UART2_init(void)",
+    "location": {
+      "column": "6",
+      "line": "50",
+      "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
+    },
+    "name": "UART2_init",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:main.c@1430@F@UART2_init@GPIO_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "GPIO_InitStructure",
     "location": {
       "column": "22",
-      "line": "29",
+      "line": "52",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "GPIO_InitStructure",
@@ -120718,13 +120746,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@809@F@main@USART_InitStructure",
+    "ID": "c:main.c@1472@F@UART2_init@USART_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "USART_InitStructure",
     "location": {
       "column": "21",
-      "line": "30",
+      "line": "53",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "USART_InitStructure",
@@ -120732,13 +120760,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@851@F@main@NVIC_InitStructure",
+    "ID": "c:main.c@1514@F@UART2_init@NVIC_InitStructure",
     "What": "Variable",
     "defdec": "Def",
     "display": "NVIC_InitStructure",
     "location": {
       "column": "22",
-      "line": "31",
+      "line": "54",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "NVIC_InitStructure",
@@ -120752,7 +120780,7 @@
     "display": "void Serial2_Event(void)",
     "location": {
       "column": "6",
-      "line": "82",
+      "line": "89",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "Serial2_Event",
@@ -120760,13 +120788,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3022@F@Serial2_Event@i",
+    "ID": "c:main.c@3095@F@Serial2_Event@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "7",
-      "line": "84",
+      "line": "91",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "i",
@@ -120774,13 +120802,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3034@F@Serial2_Event@num",
+    "ID": "c:main.c@3107@F@Serial2_Event@num",
     "What": "Variable",
     "defdec": "Def",
     "display": "num",
     "location": {
       "column": "7",
-      "line": "85",
+      "line": "92",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "num",
@@ -120788,13 +120816,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3050@F@Serial2_Event@pToken",
+    "ID": "c:main.c@3123@F@Serial2_Event@pToken",
     "What": "Variable",
     "defdec": "Def",
     "display": "pToken",
     "location": {
       "column": "10",
-      "line": "86",
+      "line": "93",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "pToken",
@@ -120802,13 +120830,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3068@F@Serial2_Event@pArray",
+    "ID": "c:main.c@3141@F@Serial2_Event@pArray",
     "What": "Variable",
     "defdec": "Def",
     "display": "pArray",
     "location": {
       "column": "10",
-      "line": "87",
+      "line": "94",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "pArray",
@@ -120816,13 +120844,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3099@F@Serial2_Event@recvBuf",
+    "ID": "c:main.c@3172@F@Serial2_Event@recvBuf",
     "What": "Variable",
     "defdec": "Def",
     "display": "recvBuf",
     "location": {
       "column": "8",
-      "line": "88",
+      "line": "95",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "recvBuf",
@@ -120836,7 +120864,7 @@
     "display": "void Serial2_Send(unsigned char)",
     "location": {
       "column": "6",
-      "line": "123",
+      "line": "130",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "Serial2_Send",
@@ -120850,7 +120878,7 @@
     "display": "void Serial2_Send_String(char *)",
     "location": {
       "column": "6",
-      "line": "129",
+      "line": "136",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "Serial2_Send_String",
@@ -120864,7 +120892,7 @@
     "display": "int putchar(int)",
     "location": {
       "column": "5",
-      "line": "138",
+      "line": "145",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "putchar",
@@ -120878,7 +120906,7 @@
     "display": "void USART2_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "145",
+      "line": "152",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "USART2_IRQHandler",
@@ -120886,13 +120914,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4346@F@USART2_IRQHandler@i",
+    "ID": "c:main.c@4419@F@USART2_IRQHandler@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "13",
-      "line": "149",
+      "line": "156",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "i",
@@ -120906,7 +120934,7 @@
     "display": "void print_2d1(double)",
     "location": {
       "column": "6",
-      "line": "164",
+      "line": "171",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "print_2d1",
@@ -120914,13 +120942,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4606@F@print_2d1@i",
+    "ID": "c:main.c@4679@F@print_2d1@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
     "location": {
       "column": "22",
-      "line": "166",
+      "line": "173",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "i",
@@ -120928,13 +120956,13 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4606@F@print_2d1@j",
+    "ID": "c:main.c@4679@F@print_2d1@j",
     "What": "Variable",
     "defdec": "Dec",
     "display": "j",
     "location": {
       "column": "25",
-      "line": "166",
+      "line": "173",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
     "name": "j",

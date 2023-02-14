@@ -22,15 +22,11 @@ void Serial2_Send(unsigned char t);
 void Serial2_Send_String(char* s);
 int putchar(int ch);
 void print_2d1(double number);
+void UART2_init();
 
 int main()
 {
   GPIO_InitTypeDef   GPIO_InitStructure_LED;
-  GPIO_InitTypeDef   GPIO_InitStructure;
-  USART_InitTypeDef USART_InitStructure;
-  NVIC_InitTypeDef   NVIC_InitStructure;
-  
-  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
   
   GPIO_InitStructure_LED.GPIO_Mode = GPIO_Mode_OUT;
   GPIO_InitStructure_LED.GPIO_OType = GPIO_OType_PP;
@@ -38,6 +34,24 @@ int main()
   GPIO_InitStructure_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;
   GPIO_InitStructure_LED.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3|GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_6|GPIO_Pin_7;
   GPIO_Init(GPIOC, &GPIO_InitStructure_LED);  
+  
+  
+  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
+  
+  UART2_init();
+
+  Serial2_Send_String("Start Main()\n\r");
+  while(1)
+  {
+    if(rx2Flag)  // '\r' 까지 입력되면
+      Serial2_Event();
+  }
+}
+void UART2_init()
+{ 
+  GPIO_InitTypeDef   GPIO_InitStructure;
+  USART_InitTypeDef USART_InitStructure;
+  NVIC_InitTypeDef   NVIC_InitStructure; 
   
   RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
   RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
@@ -69,14 +83,7 @@ int main()
   USART_Init(USART2, &USART_InitStructure);
 
   USART_ITConfig(USART2, USART_IT_RXNE, ENABLE); // USART2 Interrupt enable
-  USART_Cmd(USART2, ENABLE);
-
-  Serial2_Send_String("Start Main()\n\r");
-  while(1)
-  {
-    if(rx2Flag)  // '\r' 까지 입력되면
-      Serial2_Event();
-  }
+  USART_Cmd(USART2, ENABLE); 
 }
 
 void Serial2_Event()
