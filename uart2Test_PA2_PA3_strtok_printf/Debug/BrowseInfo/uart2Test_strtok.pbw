@@ -120564,16 +120564,16 @@
     "scope": null
   },
   {
-    "ID": "c:@rx1Flag",
+    "ID": "c:@rx2Flag",
     "What": "Variable",
     "defdec": "Def",
-    "display": "rx1Flag",
+    "display": "rx2Flag",
     "location": {
       "column": "24",
       "line": "17",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "rx1Flag",
+    "name": "rx2Flag",
     "origin": "project_file",
     "scope": null
   },
@@ -120760,7 +120760,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3026@F@Serial2_Event@i",
+    "ID": "c:main.c@3022@F@Serial2_Event@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -120774,7 +120774,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3038@F@Serial2_Event@num",
+    "ID": "c:main.c@3034@F@Serial2_Event@num",
     "What": "Variable",
     "defdec": "Def",
     "display": "num",
@@ -120788,7 +120788,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3054@F@Serial2_Event@pToken",
+    "ID": "c:main.c@3050@F@Serial2_Event@pToken",
     "What": "Variable",
     "defdec": "Def",
     "display": "pToken",
@@ -120802,7 +120802,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3072@F@Serial2_Event@pArray",
+    "ID": "c:main.c@3068@F@Serial2_Event@pArray",
     "What": "Variable",
     "defdec": "Def",
     "display": "pArray",
@@ -120816,7 +120816,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@3103@F@Serial2_Event@recvBuf",
+    "ID": "c:main.c@3099@F@Serial2_Event@recvBuf",
     "What": "Variable",
     "defdec": "Def",
     "display": "recvBuf",
@@ -120872,21 +120872,21 @@
     "scope": null
   },
   {
-    "ID": "c:@F@USART3_IRQHandler",
+    "ID": "c:@F@USART2_IRQHandler",
     "What": "Function",
     "defdec": "Def",
-    "display": "void USART3_IRQHandler(void)",
+    "display": "void USART2_IRQHandler(void)",
     "location": {
       "column": "6",
       "line": "145",
       "path": "C:\\Users\\IoT02\\Documents\\iar\\uart2Test_PA2_PA3_strtok_printf\\main.c"
     },
-    "name": "USART3_IRQHandler",
+    "name": "USART2_IRQHandler",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:main.c@4350@F@USART3_IRQHandler@i",
+    "ID": "c:main.c@4346@F@USART2_IRQHandler@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -120914,7 +120914,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4610@F@print_2d1@i",
+    "ID": "c:main.c@4606@F@print_2d1@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",
@@ -120928,7 +120928,7 @@
     "scope": null
   },
   {
-    "ID": "c:main.c@4610@F@print_2d1@j",
+    "ID": "c:main.c@4606@F@print_2d1@j",
     "What": "Variable",
     "defdec": "Dec",
     "display": "j",

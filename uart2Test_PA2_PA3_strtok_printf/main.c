@@ -14,7 +14,7 @@
 #define ARR_CNT 5  
 
 
-volatile unsigned char rx1Flag = 0;
+volatile unsigned char rx2Flag = 0;
 char rx2Data[50];
 void UART1_Init();
 void Serial2_Event();
@@ -39,22 +39,22 @@ int main()
   GPIO_InitStructure_LED.GPIO_Pin = GPIO_Pin_0|GPIO_Pin_1|GPIO_Pin_2|GPIO_Pin_3|GPIO_Pin_4|GPIO_Pin_5|GPIO_Pin_6|GPIO_Pin_7;
   GPIO_Init(GPIOC, &GPIO_InitStructure_LED);  
   
-  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3, ENABLE);
+  RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
   
   GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;                                             
   GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
-  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10|GPIO_Pin_11;
-  GPIO_Init(GPIOC, &GPIO_InitStructure);
+  GPIO_InitStructure.GPIO_Pin = GPIO_Pin_2|GPIO_Pin_3;
+  GPIO_Init(GPIOA, &GPIO_InitStructure);
   
-  GPIO_PinAFConfig(GPIOC, GPIO_PinSource10, GPIO_AF_USART3);     //USART3_TX
-  GPIO_PinAFConfig(GPIOC, GPIO_PinSource11, GPIO_AF_USART3);    //USART3_RX
+  GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);     //USART2_TX
+  GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);    //USART2_RX
 
   //인터럽트 enable 및 Priority 설정.
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);  
-  NVIC_InitStructure.NVIC_IRQChannel = USART3_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannel = USART2_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
@@ -66,15 +66,15 @@ int main()
   USART_InitStructure.USART_Parity = USART_Parity_No;
   USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
   USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-  USART_Init(USART3, &USART_InitStructure);
+  USART_Init(USART2, &USART_InitStructure);
 
-  USART_ITConfig(USART3, USART_IT_RXNE, ENABLE); // USART3 Interrupt enable
-  USART_Cmd(USART3, ENABLE);
+  USART_ITConfig(USART2, USART_IT_RXNE, ENABLE); // USART2 Interrupt enable
+  USART_Cmd(USART2, ENABLE);
 
   Serial2_Send_String("Start Main()\n\r");
   while(1)
   {
-    if(rx1Flag)  // '\r' 까지 입력되면
+    if(rx2Flag)  // '\r' 까지 입력되면
       Serial2_Event();
   }
 }
@@ -88,7 +88,7 @@ void Serial2_Event()
   char recvBuf[CMD_SIZE]={0};       
   strcpy(recvBuf,rx2Data);
 
-  rx1Flag = 0; // 다시 Rflag 를 0으로 놓는다.    
+  rx2Flag = 0; // 다시 Rflag 를 0으로 놓는다.    
   Serial2_Send_String(recvBuf);
   Serial2_Send_String("\n\r");
   printf("rx : %s\r\n",recvBuf);
@@ -122,8 +122,8 @@ void Serial2_Event()
 
 void Serial2_Send(unsigned char t)
 {
-  USART_SendData(USART3, t);
-  while (USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
+  USART_SendData(USART2, t);
+  while (USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET);
 }
 
 void Serial2_Send_String(char* s)
@@ -137,21 +137,21 @@ void Serial2_Send_String(char* s)
 
 int putchar(int ch)
 {
-	while(USART_GetFlagStatus(USART3, USART_FLAG_TXE) == RESET);
-	USART_SendData(USART3,ch);
+	while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == RESET);
+	USART_SendData(USART2,ch);
 	return ch;
 }
 
-void USART3_IRQHandler(void)
+void USART2_IRQHandler(void)
 {
-  if(USART_GetITStatus(USART3, USART_IT_RXNE) != RESET)
+  if(USART_GetITStatus(USART2, USART_IT_RXNE) != RESET)
   {
 	static int i=0;
-	rx2Data[i] = USART_ReceiveData(USART3);
+	rx2Data[i] = USART_ReceiveData(USART2);
 	if(rx2Data[i] == '\r')  
 	{
 		rx2Data[i] = '\0';
-		rx1Flag = 1;
+		rx2Flag = 1;
 		i = 0;
 	}
 	else
