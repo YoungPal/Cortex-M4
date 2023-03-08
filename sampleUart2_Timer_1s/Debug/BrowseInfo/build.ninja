@@ -1,0 +1,130 @@
+##IAR Ninja build file
+
+
+#Rules
+rule COMPILER_XCL
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\XclFileGenerator.exe" $xclcommand -f "$rspfile_name"
+  description = IAR_NEW_TOOL+++COMPILER_XCL+++$in
+  rspfile = $rspfile_name
+  rspfile_content = $flags
+
+rule INDEXER
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\SourceIndexer.exe" $flags
+  depfile = $out.dep
+  description = IAR_NEW_TOOL+++INDEXER+++$out
+
+rule MAKEBROWSE
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\makeBrowseData.exe" $flags
+  description = IAR_NEW_TOOL+++MAKEBROWSE+++$out
+
+rule PDBLINK
+  command = "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\common\bin\PbdLink.exe" $flags
+  description = IAR_NEW_TOOL+++PDBLINK+++$out
+
+
+
+#Build steps
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\Cortex-M4\sampleUart2_Timer_1s\stm32f4xx_it.c -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = D$:\Cortex-M4\sampleUart2_Timer_1s\stm32f4xx_it.c -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\COMM --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\Cortex-M4\sampleUart2_Timer_1s\system_stm32f4xx.c -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = D$:\Cortex-M4\sampleUart2_Timer_1s\system_stm32f4xx.c -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\COMM --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c" -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c" -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\STM32 --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c" -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c" -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\STM32 --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c" -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c" -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\STM32 --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c" -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c" -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\STM32 --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.xcl : COMPILER_XCL 
+  xclcommand = -source_file "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c" -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c" -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\STM32 --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\Cortex-M4\sampleUart2_Timer_1s\main.c -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = D$:\Cortex-M4\sampleUart2_Timer_1s\main.c -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.xcl : COMPILER_XCL 
+  xclcommand = -source_file D$:\Cortex-M4\sampleUart2_Timer_1s\uart2.c -xcl_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.xcl -macro_file D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.tmp -icc_path "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\bin\iccarm.exe"
+  flags = D$:\Cortex-M4\sampleUart2_Timer_1s\uart2.c -D USE_STDPERIPH_DRIVER -D STM32F40_41xxx -o D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\Obj\ --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa --no_clustering --no_scheduling --debug --endian=little --cpu=Cortex-M4 -e --fpu=VFPv4_sp --dlib_config "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\inc\c\DLib_Config_Full.h" -I "C$:\Program$ Files\IAR$ Systems\Libraries\CMSIS\Device\ST\STM32F4xx\Include\\" -I "C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\inc\\" -I D$:\Cortex-M4\sampleUart2_Timer_1s\ -Ol -I "C$:\Program$ Files\IAR$ Systems\Embedded$ Workbench$ 9.1\arm\CMSIS\Core\Include\\" --predef_macros D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.tmp
+  rspfile_name = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.xcl.rsp
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.xcl |  $
+D$:\Cortex-M4\sampleUart2_Timer_1s\stm32f4xx_it.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.xcl |  $
+D$:\Cortex-M4\sampleUart2_Timer_1s\system_stm32f4xx.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.xcl |  $
+C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.xcl |  $
+C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_gpio.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.xcl |  $
+C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_rcc.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.xcl |  $
+C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_tim.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.xcl |  $
+C$:\Program$ Files\IAR$ Systems\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.xcl |  $
+D$:\Cortex-M4\sampleUart2_Timer_1s\main.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.pbi : INDEXER D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.xcl |  $
+D$:\Cortex-M4\sampleUart2_Timer_1s\uart2.c
+  flags = -out=D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.pbi -f D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.xcl
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer.pbw : MAKEBROWSE D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer.pbd
+  flags = D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer.pbd -output D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer.pbw
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part0.pbi : PDBLINK D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.pbi |  $
+D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.pbi $
+D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.pbi
+  flags = -M D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part0.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\stm32f4xx_it.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\COMM\system_stm32f4xx.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\misc.pbi
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part1.pbi : PDBLINK D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.pbi |  $
+D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.pbi $
+D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.pbi
+  flags = -M D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part1.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_gpio.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_rcc.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_tim.pbi
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part2.pbi : PDBLINK D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.pbi |  $
+D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.pbi $
+D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.pbi
+  flags = -M D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part2.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\STM32\stm32f4xx_usart.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\main.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\uart2.pbi
+
+build D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer.pbd : PDBLINK D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part0.pbi |  $
+D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part1.pbi $
+D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part2.pbi
+  flags = -M D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer.pbd D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part0.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part1.pbi D$:\Cortex-M4\sampleUart2_Timer_1s\Debug\BrowseInfo\sampleUart2_Timer_part2.pbi
+
