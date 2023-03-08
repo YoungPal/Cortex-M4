@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\Cortex-M4\sampleUart2_Timer\settings\sampleUart2_Timer.Debug.general.xcl" --backend -f "D:\Cortex-M4\sampleUart2_Timer\settings\sampleUart2_Timer.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1_0\common\bin\cspybat" -f "D:\github\Cortex-M4\sampleUart2_Timer\settings\sampleUart2_Timer.Debug.general.xcl" --backend -f "D:\github\Cortex-M4\sampleUart2_Timer\settings\sampleUart2_Timer.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.1\common\bin\cspybat" -f "D:\Cortex-M4\sampleUart2_Timer\settings\sampleUart2_Timer.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\Cortex-M4\sampleUart2_Timer\settings\sampleUart2_Timer.Debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.1_0\common\bin\cspybat" -f "D:\github\Cortex-M4\sampleUart2_Timer\settings\sampleUart2_Timer.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\github\Cortex-M4\sampleUart2_Timer\settings\sampleUart2_Timer.Debug.driver.xcl" 
 
 @echo off 
 :end
